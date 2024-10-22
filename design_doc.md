@@ -57,8 +57,10 @@
 ## 実装
 
 #### 遷移 UI フロー
+![image](https://github.com/user-attachments/assets/fcc21c20-bad7-4d08-8825-b10641d751b3)
 
 #### 処理フロー
+![image](https://github.com/user-attachments/assets/3af176a3-079e-4e30-9a6b-1834b230db58)
 
 ## 課題
 
