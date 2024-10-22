@@ -8,7 +8,7 @@ git add chrome_extensions/
 git add errorda2_backend/
 
 # コミットメッセージ
-commit_message="Update submodules: chrome_extensions and errorda2_backend"
+commit_message="[update] submodules: chrome_extensions and errorda2_backend"
 
 # コミット
 git commit -m "$commit_message"
