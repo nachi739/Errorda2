@@ -37,8 +37,15 @@
 
 ## 使用技術
 
-- next.js
+- Next.js
 - React
 - TypeScript
 - Tailwind CSS
 - Vercel
+- Vite
+- ESLint
+- Prettier
+
+## ライセンス
+
+このプロジェクトは [MIT ライセンス](./LICENSE) の下でライセンスされています。
