@@ -1,0 +1,3 @@
+[submodule "chrome_extensions"]
+	path = chrome_extensions
+	url = git@github.com:nachi739/errorda2_chrome_extensions.git
