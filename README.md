@@ -37,6 +37,7 @@
 
 ## 使用技術
 
+- Notion
 - Next.js
 - React
 - TypeScript
