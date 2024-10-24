@@ -1,17 +1,21 @@
 #!/bin/bash
 
-# サブモジュールの更新
+echo "サブモジュールの更新"
 git submodule update --remote
 
-# サブモジュールの変更をステージング
+echo "サブモジュールの変更をステージング"
 git add chrome_extensions/
 git add errorda2_backend/
 
-# コミットメッセージ
-commit_message="[update] submodules: chrome_extensions and errorda2_backend"
+echo "サブモジュールの最新コミットメッセージを取得"
+chrome_commit_message=$(cd chrome_extensions && git log -1 --pretty=%B)
+errorda2_commit_message=$(cd errorda2_backend && git log -1 --pretty=%B)
 
-# コミット
+echo "コミットメッセージを作成"
+commit_message="[update] submodules: chrome_extensions: $chrome_commit_message, errorda2_backend: $errorda2_commit_message"
+
+echo "コミット"
 git commit -m "$commit_message"
 
-# プッシュ
+echo "プッシュ"
 git push origin main
