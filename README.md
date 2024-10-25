@@ -47,6 +47,12 @@
 - ESLint
 - Prettier
 
+## Notionの準備
+
+- API-Key(Token)の取得:https://www.notion.so/my-integrations
+- Notion-Templateの取得: [Template](https://honored-motion-55e.notion.site/129eaa80727680f19b06d02621f24066?v=129eaa807276819899ee000c30bb0f5b&pvs=4)
+- Notion-DATABASE-IDの取得:`https://www.notion.so/{Notion-DATABASE-ID}?v=129eaa807276819899ee000c30bb0f5b`
+
 ## ライセンス
 
 このプロジェクトは [MIT ライセンス](./LICENSE) の下でライセンスされています。
