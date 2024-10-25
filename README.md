@@ -58,7 +58,6 @@
 ### 初回Notion-Key情報登録画面
 <img width="241" alt="image" src="https://github.com/user-attachments/assets/c2627d18-d30c-474f-ad49-eee7a4d60fee">
 
-
 ### 検索画面
 - 入力テキスト内容でGoogle検索を新規タブで行います。
 - NotionDB（新規作成し入力テキスト内容でTitleに保存・Start timeに検索押下時刻を保存）
@@ -69,9 +68,15 @@
 <img width="240" alt="image" src="https://github.com/user-attachments/assets/4930cc5e-ae13-49d2-a4d9-13e0b8e61ba5">
 
 ### 導入・構築方法
-[Chrome拡張機能管理Github](https://github.com/nachi739/errorda2_chrome_extensions/tree/main)
+[Chrome拡張機能管理Github](https://github.com/nachi739/errorda2_chrome_extensions/tree/main)を参照してください。
 
+## バックエンド側
+- Vercelを利用しデプロイ：https://errorda2.vercel.app
+- NotionDBのPublishedフラグが有効になっているものを連携
+- 一部マークダウン記法に現在対応（今後修正予定）
 
+### 導入・構築方法
+[バックエンド側管理Github](https://github.com/nachi739/errorda2_next.js)を参照してください。
 
 ## ライセンス
 
