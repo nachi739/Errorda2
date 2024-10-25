@@ -53,6 +53,26 @@
 - Notion-Templateの取得: [Template](https://honored-motion-55e.notion.site/129eaa80727680f19b06d02621f24066?v=129eaa807276819899ee000c30bb0f5b&pvs=4)
 - Notion-DATABASE-IDの取得:`https://www.notion.so/{Notion-DATABASE-ID}?v=129eaa807276819899ee000c30bb0f5b`
 
+## Chrome拡張機能
+
+### 初回Notion-Key情報登録画面
+<img width="241" alt="image" src="https://github.com/user-attachments/assets/c2627d18-d30c-474f-ad49-eee7a4d60fee">
+
+
+### 検索画面
+- 入力テキスト内容でGoogle検索を新規タブで行います。
+- NotionDB（新規作成し入力テキスト内容でTitleに保存・Start timeに検索押下時刻を保存）
+<img width="237" alt="image" src="https://github.com/user-attachments/assets/d8f51e30-5b06-4e5b-bf2c-cf5a32007f81">
+
+### 検索中画面
+- NotionDB(End timeに解決押下時刻を保存・新規タブでNotionDBの詳細ページへ画面遷移)
+<img width="240" alt="image" src="https://github.com/user-attachments/assets/4930cc5e-ae13-49d2-a4d9-13e0b8e61ba5">
+
+### 導入・構築方法
+[Chrome拡張機能管理Github](https://github.com/nachi739/errorda2_chrome_extensions/tree/main)
+
+
+
 ## ライセンス
 
 このプロジェクトは [MIT ライセンス](./LICENSE) の下でライセンスされています。
