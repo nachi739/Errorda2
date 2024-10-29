@@ -46,6 +46,7 @@
 ## 選択した技術
 
 - Notion
+- Docker
 - Next.js
 - React
 - TypeScript
