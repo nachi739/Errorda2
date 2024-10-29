@@ -38,6 +38,7 @@
 ## 使用技術
 
 - Notion
+- Docker
 - Next.js
 - React
 - TypeScript
@@ -47,36 +48,42 @@
 - ESLint
 - Prettier
 
-## Notionの準備
+## Notion の準備
 
 - API-Key(Token)の取得:https://www.notion.so/my-integrations
-- Notion-Templateの取得: [Template](https://honored-motion-55e.notion.site/129eaa80727680f19b06d02621f24066?v=129eaa807276819899ee000c30bb0f5b&pvs=4)
-- Notion-DATABASE-IDの取得:`https://www.notion.so/{Notion-DATABASE-ID}?v=000***********`
+- Notion-Template の取得: [Template](https://honored-motion-55e.notion.site/129eaa80727680f19b06d02621f24066?v=129eaa807276819899ee000c30bb0f5b&pvs=4)
+- Notion-DATABASE-ID の取得:`https://www.notion.so/{Notion-DATABASE-ID}?v=000***********`
 
-## Chrome拡張機能
+## Chrome 拡張機能
 
-### 初回Notion-Key情報登録画面
+### 初回 Notion-Key 情報登録画面
+
 <img width="241" alt="image" src="https://github.com/user-attachments/assets/c2627d18-d30c-474f-ad49-eee7a4d60fee">
 
 ### 検索画面
-- 入力テキスト内容でGoogle検索を新規タブで行います。
-- NotionDB（新規作成し入力テキスト内容でTitleに保存・Start timeに検索押下時刻を保存）
-<img width="237" alt="image" src="https://github.com/user-attachments/assets/d8f51e30-5b06-4e5b-bf2c-cf5a32007f81">
+
+- 入力テキスト内容で Google 検索を新規タブで行います。
+- NotionDB（新規作成し入力テキスト内容で Title に保存・Start time に検索押下時刻を保存）
+  <img width="237" alt="image" src="https://github.com/user-attachments/assets/d8f51e30-5b06-4e5b-bf2c-cf5a32007f81">
 
 ### 検索中画面
-- NotionDB(End timeに解決押下時刻を保存・新規タブでNotionDBの詳細ページへ画面遷移)
-<img width="240" alt="image" src="https://github.com/user-attachments/assets/4930cc5e-ae13-49d2-a4d9-13e0b8e61ba5">
+
+- NotionDB(End time に解決押下時刻を保存・新規タブで NotionDB の詳細ページへ画面遷移)
+  <img width="240" alt="image" src="https://github.com/user-attachments/assets/4930cc5e-ae13-49d2-a4d9-13e0b8e61ba5">
 
 ### 導入・構築方法
-[Chrome拡張機能管理Github](https://github.com/nachi739/errorda2_chrome_extensions/tree/main)を参照してください。
+
+[Chrome 拡張機能管理 Github](https://github.com/nachi739/errorda2_chrome_extensions/tree/main)を参照してください。
 
 ## バックエンド側
-- Vercelを利用しデプロイ：https://errorda2.vercel.app
-- NotionDBのPublishedフラグが有効になっているものを連携
+
+- Vercel を利用しデプロイ：https://errorda2.vercel.app
+- NotionDB の Published フラグが有効になっているものを連携
 - 一部マークダウン記法に現在対応（今後修正予定）
 
 ### 導入・構築方法
-[バックエンド側管理Github](https://github.com/nachi739/errorda2_next.js)を参照してください。
+
+[バックエンド側管理 Github](https://github.com/nachi739/errorda2_next.js)を参照してください。
 
 ## ライセンス
 
