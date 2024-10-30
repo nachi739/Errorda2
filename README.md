@@ -56,6 +56,17 @@
 
 ## Chrome 拡張機能
 
+### 利用方法
+
+1. 上記 dist のダウンロード ※現在公開に向けて審査中
+2. 任意の場所に保存
+3. ダウンロードした zip ファイルをダブルクリックで解凍
+4. 新規 WEB ページを開く（GoogleChrome）
+5. [chrome://extensions](chrome://extensions)と検索
+6. 画面右上の「デベロッパーモード」を ON にすると拡張機能のメニューが表示されます。
+7. 「パッケージ化されていない拡張機能を読み込む」をクリックします。
+8. 先ほど保存したファイルを読み込む
+
 ### 初回 Notion-Key 情報登録画面
 
 <img width="241" alt="image" src="https://github.com/user-attachments/assets/c2627d18-d30c-474f-ad49-eee7a4d60fee">
