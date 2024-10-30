@@ -58,6 +58,8 @@
 
 ### 利用方法
 
+[dist.zip](https://github.com/user-attachments/files/17574588/dist.zip) 2024/10/30
+
 1. 上記 dist のダウンロード ※現在公開に向けて審査中
 2. 任意の場所に保存
 3. ダウンロードした zip ファイルをダブルクリックで解凍
