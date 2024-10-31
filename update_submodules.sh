@@ -10,6 +10,13 @@ git submodule update --remote
 # 現在のブランチ名を取得
 current_branch=$(git branch --show-current)
 
+# サブモジュールのプルリクエストリンクを取得する関数
+get_submodule_pr_link() {
+    local repo=$1
+    local pr_link=$(gh pr list --repo "$repo" --state open --json url --jq '.[0].url')
+    echo "$pr_link"
+}
+
 # chrome_extensionsの変更をステージングしてコミット
 echo "chrome_extensionsの変更をステージング"
 git add chrome_extensions/
@@ -23,7 +30,7 @@ if [ -n "$(git diff --cached --name-only chrome_extensions)" ]; then
     chrome_commit_message="submodule:chrome_extensions:$chrome_commit_message"
 
     # 新しいブランチを作成
-    new_branch="[update]chrome_extensions-$(date +%Y%m%d%H%M%S)"
+    new_branch="dev-chrome_extensions-$(date +%Y%m%d%H)"
     git checkout -b "$new_branch"
 
     echo "chrome_extensionsのコミット"
@@ -32,8 +39,12 @@ if [ -n "$(git diff --cached --name-only chrome_extensions)" ]; then
     echo "新しいブランチをプッシュ"
     git push origin "$new_branch"
 
+    # サブモジュールのプルリクエストリンクを取得
+    chrome_pr_link=$(get_submodule_pr_link "nachi739/errorda2_chrome_extensions")
+
     echo "プルリクエストを作成"
-    gh pr create --title "$chrome_commit_message" --body "This PR updates the chrome_extensions submodule." --base main --head "$new_branch"
+    pr_body="This PR updates the chrome_extensions submodule.\n\n## submodule-Pull-requests\n対象のサブモジュールのPull requestのリンク\n$chrome_pr_link"
+    gh pr create --title "$new_branch" --body "$pr_body" --base main --head "$new_branch"
 
     # 元のブランチに戻る
     git checkout "$current_branch"
@@ -54,7 +65,7 @@ if [ -n "$(git diff --cached --name-only errorda2_backend)" ]; then
     errorda2_commit_message="submodule:errorda2_backend:$errorda2_commit_message"
 
     # 新しいブランチを作成
-    new_branch="[update]errorda2_backend-$(date +%Y%m%d%H%M%S)"
+    new_branch="dev-errorda2_backend-$(date +%Y%m%d%H)"
     git checkout -b "$new_branch"
 
     echo "errorda2_backendのコミット"
@@ -63,8 +74,12 @@ if [ -n "$(git diff --cached --name-only errorda2_backend)" ]; then
     echo "新しいブランチをプッシュ"
     git push origin "$new_branch"
 
+    # サブモジュールのプルリクエストリンクを取得
+    backend_pr_link=$(get_submodule_pr_link "nachi739/errorda2_backend")
+
     echo "プルリクエストを作成"
-    gh pr create --title "$errorda2_commit_message" --body "This PR updates the errorda2_backend submodule." --base main --head "$new_branch"
+    pr_body="This PR updates the errorda2_backend submodule.\n\n## submodule-Pull-requests\n対象のサブモジュールのPull requestのリンク\n$backend_pr_link"
+    gh pr create --title "$new_branch" --body "$pr_body" --base main --head "$new_branch"
 
     # 元のブランチに戻る
     git checkout "$current_branch"
