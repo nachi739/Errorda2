@@ -2,12 +2,12 @@
 
 # GitHub CLI (gh) がインストールされていることを確認してください
 # https://cli.github.com/
+# gh auth login でログインしてください
 
-# サブモジュールの更新
 echo "サブモジュールの更新"
 git submodule update --remote
 
-# 現在のブランチ名を取得
+echo "現在のブランチ名を取得"
 current_branch=$(git branch --show-current)
 
 # サブモジュールのプルリクエストリンクを取得する関数
@@ -29,7 +29,7 @@ if [ -n "$(git diff --cached --name-only chrome_extensions)" ]; then
     echo "chrome_extensionsのコミットメッセージを作成"
     chrome_commit_message="submodule:chrome_extensions:$chrome_commit_message"
 
-    # 新しいブランチを作成
+    echo "新しいブランチを作成"
     new_branch="dev-chrome_extensions-$(date +%Y%m%d%H)"
     git checkout -b "$new_branch"
 
@@ -39,15 +39,18 @@ if [ -n "$(git diff --cached --name-only chrome_extensions)" ]; then
     echo "新しいブランチをプッシュ"
     git push origin "$new_branch"
 
-    # サブモジュールのプルリクエストリンクを取得
+    echo "サブモジュールのプルリクエストリンクを取得"
     chrome_pr_link=$(get_submodule_pr_link "nachi739/errorda2_chrome_extensions")
 
     echo "プルリクエストを作成"
     pr_body="This PR updates the chrome_extensions submodule.\n\n## submodule-Pull-requests\n対象のサブモジュールのPull requestのリンク\n$chrome_pr_link"
     gh pr create --title "$new_branch" --body "$pr_body" --base main --head "$new_branch"
 
-    # 元のブランチに戻る
+    echo "元のブランチに戻る"
     git checkout "$current_branch"
+
+    echo "作製したブランチを削除（ローカルでは不要のため）"
+    git branch -D "$new_branch"
 else
     echo "chrome_extensionsに変更はありません"
 fi
@@ -64,7 +67,7 @@ if [ -n "$(git diff --cached --name-only errorda2_backend)" ]; then
     echo "errorda2_backendのコミットメッセージを作成"
     errorda2_commit_message="submodule:errorda2_backend:$errorda2_commit_message"
 
-    # 新しいブランチを作成
+    echo "新しいブランチを作成"
     new_branch="dev-errorda2_backend-$(date +%Y%m%d%H)"
     git checkout -b "$new_branch"
 
@@ -74,15 +77,18 @@ if [ -n "$(git diff --cached --name-only errorda2_backend)" ]; then
     echo "新しいブランチをプッシュ"
     git push origin "$new_branch"
 
-    # サブモジュールのプルリクエストリンクを取得
+    echo "サブモジュールのプルリクエストリンクを取得"
     backend_pr_link=$(get_submodule_pr_link "nachi739/errorda2_backend")
 
     echo "プルリクエストを作成"
     pr_body="This PR updates the errorda2_backend submodule.\n\n## submodule-Pull-requests\n対象のサブモジュールのPull requestのリンク\n$backend_pr_link"
     gh pr create --title "$new_branch" --body "$pr_body" --base main --head "$new_branch"
 
-    # 元のブランチに戻る
+    echo "元のブランチに戻る"
     git checkout "$current_branch"
+
+    echo "作製したブランチを削除（ローカルでは不要のため）"
+    git branch -D "$new_branch"
 else
     echo "errorda2_backendに変更はありません"
 fi
