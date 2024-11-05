@@ -51,8 +51,53 @@
 ## Notion の準備
 
 - API-Key(Token)の取得:https://www.notion.so/my-integrations
+  ---
+
+  ![image](https://github.com/user-attachments/assets/f34eda35-ace1-4bf1-89ac-393a239d9bc9)
+  
+  ---
+
+  ![image](https://github.com/user-attachments/assets/d26bdb2d-21c0-4521-8ea5-10cf50527ca4)
+
+  ---
+
+  ![image](https://github.com/user-attachments/assets/752caa05-1369-44c2-be5b-812bedd95a7a)
+
+  ---
+
+  ![image](https://github.com/user-attachments/assets/5ee4c38c-fe85-4859-9ba9-31859ef92414)
+
+  ---
+
 - Notion-Template の取得: [Template](https://honored-motion-55e.notion.site/129eaa80727680f19b06d02621f24066?v=129eaa807276819899ee000c30bb0f5b&pvs=4)
-- Notion-DATABASE-ID の取得:`https://www.notion.so/{Notion-DATABASE-ID}?v=000***********`
+  ---
+
+  ![image](https://github.com/user-attachments/assets/ce1e13ab-bc85-4aa1-bff2-95c8fa2d2ba6)
+
+  ---
+
+  ![image](https://github.com/user-attachments/assets/a5fa2250-2951-4327-bfad-2eeee7756d40)
+
+  ---
+
+  ![image](https://github.com/user-attachments/assets/097c62dc-39e7-440e-b114-882ec7cee757)
+
+  ---
+  
+  ![image](https://github.com/user-attachments/assets/7dd09873-0ea3-4fde-b2af-0c20c38f9d33)
+
+  ---
+
+  ![image](https://github.com/user-attachments/assets/fbf94598-2e9b-41f3-bcf4-cf00a46ea51a)
+
+  ---
+  
+- DATABASE-IDの取得:`https://www.notion.so/{Notion-DATABASE-ID}?v=000***`
+  ---
+
+![image](https://github.com/user-attachments/assets/c79e34a7-c123-41b0-a302-f73d5b93ebc6)
+
+  ---
 
 ## Chrome 拡張機能
 
@@ -66,23 +111,37 @@
 4. 新規 WEB ページを開く（GoogleChrome）
 5. [chrome://extensions](chrome://extensions)と検索
 6. 画面右上の「デベロッパーモード」を ON にすると拡張機能のメニューが表示されます。
+
+![image](https://github.com/user-attachments/assets/4a0f3825-1402-4c88-8892-28b31b780bae)
+---
+
 7. 「パッケージ化されていない拡張機能を読み込む」をクリックします。
-8. 先ほど保存したファイルを読み込む
+
+![image](https://github.com/user-attachments/assets/2a7fbe2c-ec89-4922-8a0a-527d36c5e927)
+---
+
+8. 先ほど保存し解凍したファイルを読み込む
 
 ### 初回 Notion-Key 情報登録画面
+- NotionのTokenとDatabaseIDを登録します。
 
-<img width="241" alt="image" src="https://github.com/user-attachments/assets/c2627d18-d30c-474f-ad49-eee7a4d60fee">
+  <img width="375" alt="image" src="https://github.com/user-attachments/assets/632449f1-8f58-4ede-a7ad-18621d90766d">
+
 
 ### 検索画面
 
 - 入力テキスト内容で Google 検索を新規タブで行います。
 - NotionDB（新規作成し入力テキスト内容で Title に保存・Start time に検索押下時刻を保存）
-  <img width="237" alt="image" src="https://github.com/user-attachments/assets/d8f51e30-5b06-4e5b-bf2c-cf5a32007f81">
+
+  <img width="379" alt="image" src="https://github.com/user-attachments/assets/151d2d43-5ee5-442a-a872-665da93bbc40">
+
 
 ### 検索中画面
 
 - NotionDB(End time に解決押下時刻を保存・新規タブで NotionDB の詳細ページへ画面遷移)
-  <img width="240" alt="image" src="https://github.com/user-attachments/assets/4930cc5e-ae13-49d2-a4d9-13e0b8e61ba5">
+
+  <img width="381" alt="image" src="https://github.com/user-attachments/assets/c8ae316f-0307-4c2a-9bc2-0357fa1827ef">
+
 
 ### 導入・構築方法
 
