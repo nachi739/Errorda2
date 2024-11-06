@@ -102,8 +102,8 @@
 ## Chrome 拡張機能
 
 ### 利用方法
+[dist.zip](https://github.com/user-attachments/files/17644504/dist.zip) 2024/11/06
 
-[dist.zip](https://github.com/user-attachments/files/17574588/dist.zip) 2024/10/30
 
 1. 上記 dist のダウンロード ※現在公開に向けて審査中
 2. 任意の場所に保存
