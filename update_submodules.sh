@@ -43,8 +43,9 @@ if [ -n "$(git diff --cached --name-only chrome_extensions)" ]; then
     chrome_pr_link=$(get_submodule_pr_link "nachi739/errorda2_chrome_extensions")
 
     echo "プルリクエストを作成"
-    pr_body="This PR updates the chrome_extensions submodule.\n\n## submodule-Pull-requests\n対象のサブモジュールのPull requestのリンク\n$chrome_pr_link"
+    pr_body=$(echo -e "This PR updates the chrome_extensions submodule.\n\n## submodule-Pull-requests\n対象のサブモジュールのPull requestのリンク\n$chrome_pr_link")
     gh pr create --title "$new_branch" --body "$pr_body" --base main --head "$new_branch"
+
 
     echo "元のブランチに戻る"
     git checkout "$current_branch"
@@ -81,8 +82,9 @@ if [ -n "$(git diff --cached --name-only errorda2_backend)" ]; then
     backend_pr_link=$(get_submodule_pr_link "nachi739/errorda2_backend")
 
     echo "プルリクエストを作成"
-    pr_body="This PR updates the errorda2_backend submodule.\n\n## submodule-Pull-requests\n対象のサブモジュールのPull requestのリンク\n$backend_pr_link"
+    pr_body=$(echo -e "This PR updates the errorda2_backend submodule.\n\n## submodule-Pull-requests\n対象のサブモジュールのPull requestのリンク\n$backend_pr_link")
     gh pr create --title "$new_branch" --body "$pr_body" --base main --head "$new_branch"
+
 
     echo "元のブランチに戻る"
     git checkout "$current_branch"
