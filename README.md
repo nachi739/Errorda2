@@ -102,8 +102,7 @@
 ## Chrome 拡張機能
 
 ### 利用方法
-[dist.zip](https://github.com/user-attachments/files/17644504/dist.zip) 2024/11/06
-
+[dist.zip](https://github.com/user-attachments/files/17712606/dist.zip) 最終更新日2024/11/12
 
 1. 上記 dist のダウンロード ※現在公開に向けて審査中
 2. 任意の場所に保存
@@ -125,22 +124,25 @@
 ### 初回 Notion-Key 情報登録画面
 - NotionのTokenとDatabaseIDを登録します。
 
-  <img width="375" alt="image" src="https://github.com/user-attachments/assets/632449f1-8f58-4ede-a7ad-18621d90766d">
-
+  <img width="348" alt="image" src="https://github.com/user-attachments/assets/496da598-5ef9-47e3-9723-baf6cb2bf101">
 
 ### 検索画面
 
 - 入力テキスト内容で Google 検索を新規タブで行います。
 - NotionDB（新規作成し入力テキスト内容で Title に保存・Start time に検索押下時刻を保存）
+- Key-resetをクリックするとNotion-Key　情報登録画面に遷移しKey情報を更新できます。
 
-  <img width="379" alt="image" src="https://github.com/user-attachments/assets/151d2d43-5ee5-442a-a872-665da93bbc40">
+  <img width="348" alt="image" src="https://github.com/user-attachments/assets/6f32e2d5-ada7-4293-bbb1-94f788e125c7">
+
 
 
 ### 検索中画面
 
 - NotionDB(End time に解決押下時刻を保存・新規タブで NotionDB の詳細ページへ画面遷移)
+- Error解決時に記載する内容の参考情報を箇条書きで記載
 
-  <img width="381" alt="image" src="https://github.com/user-attachments/assets/c8ae316f-0307-4c2a-9bc2-0357fa1827ef">
+  <img width="348" alt="image" src="https://github.com/user-attachments/assets/a77dae84-bc13-434f-b580-36e2f1740543">
+
 
 
 ### 導入・構築方法
