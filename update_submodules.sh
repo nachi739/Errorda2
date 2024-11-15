@@ -21,7 +21,7 @@ get_submodule_latest_closed_pr_link() {
     local repo_name=$(basename -s .git "$repo_url")
     local repo_owner=$(basename $(dirname "$repo_url"))
     local repo="$repo_owner/$repo_name"
-    local pr_link=$(gh pr list --repo "$repo" --state closed --sort created --limit 1 --json url --jq '.[0].url')
+    local pr_link=$(gh pr list --repo "$repo" --state closed --json url,updatedAt --jq 'sort_by(.updatedAt) | reverse | .[0].url')
     if [ -z "$pr_link" ]; then
         echo "No closed pull request found for $repo"
     fi
