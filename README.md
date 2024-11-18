@@ -92,7 +92,8 @@
 
   ---
   
-- DATABASE-IDの取得:`https://www.notion.so/{Notion-DATABASE-ID}?v=000***`
+- DATABASE-IDの取得:  
+`https://www.notion.so/{Notion-DATABASE-ID}?v=000***`
   ---
 
 ![image](https://github.com/user-attachments/assets/c79e34a7-c123-41b0-a302-f73d5b93ebc6)
@@ -102,7 +103,7 @@
 ## Chrome 拡張機能
 
 ### 利用方法
-[dist.zip](https://github.com/user-attachments/files/17712606/dist.zip) 最終更新日2024/11/12
+[dist.zip](https://github.com/user-attachments/files/17797004/dist.zip) 最終更新日2024/11/18
 
 1. 上記 dist のダウンロード ※現在公開に向けて審査中
 2. 任意の場所に保存
