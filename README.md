@@ -125,7 +125,7 @@
 ### 初回 Notion-Key 情報登録画面
 - NotionのTokenとDatabaseIDを登録します。
 
-  <img width="348" alt="image" src="https://github.com/user-attachments/assets/496da598-5ef9-47e3-9723-baf6cb2bf101">
+  <img width="315" alt="image" src="https://github.com/user-attachments/assets/1413c089-4b30-4307-b906-3323e7e27ac6">
 
 ### 検索画面
 
@@ -133,18 +133,14 @@
 - NotionDB（新規作成し入力テキスト内容で Title に保存・Start time に検索押下時刻を保存）
 - Key-resetをクリックするとNotion-Key　情報登録画面に遷移しKey情報を更新できます。
 
-  <img width="348" alt="image" src="https://github.com/user-attachments/assets/6f32e2d5-ada7-4293-bbb1-94f788e125c7">
-
-
+  <img width="315" alt="image" src="https://github.com/user-attachments/assets/1e4c93c3-3bf1-4aeb-a9ff-c9516de2b722">
 
 ### 検索中画面
 
 - NotionDB(End time に解決押下時刻を保存・新規タブで NotionDB の詳細ページへ画面遷移)
 - Error解決時に記載する内容の参考情報を箇条書きで記載
 
-  <img width="348" alt="image" src="https://github.com/user-attachments/assets/a77dae84-bc13-434f-b580-36e2f1740543">
-
-
+  <img width="315" alt="image" src="https://github.com/user-attachments/assets/090bb815-0ca0-4467-b6ef-13f481ef26d3">
 
 ### 導入・構築方法
 
