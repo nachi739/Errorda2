@@ -41,7 +41,15 @@ new_chrome_branch="dev-chrome_extensions-$(date +%Y%m%d%H)"
 # chromeのプルリクエストリンクを取得
 chrome_pr_link=$(get_submodule_latest_closed_pr_link "$chrome_repo_url")
 # chromeのPRの本文
-chrome_pr_body=$(echo -e "This PR updates the chrome_extensions submodule.\n\n## submodule-Pull-requests\n対象のサブモジュールのPull requestのリンク\n$chrome_pr_link")
+chrome_pr_body=$(echo -e "## やったこと
+\n- サブモジュールの更新内容の反映
+\n## なぜやるのか・背景
+\n- 修正や追加機能があったため、それらをプロジェクト内に反映する必要があるため
+\n## 動作確認
+\n- サブモジュール側で実施済み
+\n## Refs
+\n- 対象のサブモジュールのPull requestのリンク
+\n$chrome_pr_link")
 
 # --ここからchrome_extensionsの処理--
 echo "chrome_extensionsの変更をステージング(対象以外を含まないために)"
@@ -78,7 +86,15 @@ new_backend_branch="dev-errorda2_backend-$(date +%Y%m%d%H)"
 # backendのプルリクエストリンクを取得
 backend_pr_link=$(get_submodule_latest_closed_pr_link "$backend_repo_url")
 # backendのPRの本文
-backend_pr_body=$(echo -e "This PR updates the errorda2_backend submodule.\n\n## submodule-Pull-requests\n対象のサブモジュールのPull requestのリンク\n$backend_pr_link")
+backend_pr_body=$(echo -e "## やったこと
+\n- サブモジュールの更新内容の反映
+\n## なぜやるのか・背景
+\n- 修正や追加機能があったため、それらをプロジェクト内に反映する必要があるため
+\n## 動作確認
+\n- サブモジュール側で実施済み
+\n## Refs
+\n- 対象のサブモジュールのPull requestのリンク
+\n$backend_pr_link")
 
 # --ここからerrorda2_backendの処理--
 echo "errorda2_backendの変更をステージング(対象以外を含まないために)"
