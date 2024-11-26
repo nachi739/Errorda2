@@ -18,7 +18,11 @@
 
 ### このアプリを作った背景
 
-**自分が Error を解決するにあたってこんなサービスがあったらと思っていたからです。** プログラミングをする過程で得た気づきや Error の解決方法などを体系的に残すことは難しく、Error を後でまとめようと思うが数日経ってしまい忘れて記録することができないということはよくあると思います。
+**自分が Error を解決するにあたってこんなサービスがあったらと思っていたからです。** 
+
+**前回作製した[Errorda!!](https://github.com/nachi739/Errorda-)でできなかったことを実現するため**
+
+プログラミングをする過程で得た気づきや Error の解決方法などを体系的に残すことは難しく、Error を後でまとめようと思うが数日経ってしまい忘れて記録することができないということはよくあると思います。
 そういった背景から、自分が Error を解決するにあたって Error に直面した際にどのようなワードで検索をしているのかの把握し、自分独自の Error 解決辞書を作成するといったものができないかと思い本アプリを作成しました。
 
 ## ユーザーが持つ課題
@@ -102,25 +106,8 @@
 
 ## Chrome 拡張機能
 
-### 利用方法
-[dist.zip](https://github.com/user-attachments/files/17797004/dist.zip) 最終更新日2024/11/18
-
-1. 上記 dist のダウンロード ※現在公開に向けて審査中
-2. 任意の場所に保存
-3. ダウンロードした zip ファイルをダブルクリックで解凍
-4. 新規 WEB ページを開く（GoogleChrome）
-5. [chrome://extensions](chrome://extensions)と検索
-6. 画面右上の「デベロッパーモード」を ON にすると拡張機能のメニューが表示されます。
-
-![image](https://github.com/user-attachments/assets/4a0f3825-1402-4c88-8892-28b31b780bae)
----
-
-7. 「パッケージ化されていない拡張機能を読み込む」をクリックします。
-
-![image](https://github.com/user-attachments/assets/2a7fbe2c-ec89-4922-8a0a-527d36c5e927)
----
-
-8. 先ほど保存し解凍したファイルを読み込む
+### 入手方法
+[Chromeウェブストアリンクページ](https://chromewebstore.google.com/detail/errorda2-extension/kiokhdhbecikhmpdancgmchlpjjbbkjg)
 
 ### 初回 Notion-Key 情報登録画面
 - NotionのTokenとDatabaseIDを登録します。
@@ -142,7 +129,7 @@
 
   <img width="315" alt="image" src="https://github.com/user-attachments/assets/090bb815-0ca0-4467-b6ef-13f481ef26d3">
 
-### 導入・構築方法
+### 開発環境の構築方法
 
 [Chrome 拡張機能管理 Github](https://github.com/nachi739/errorda2_chrome_extensions/tree/main)を参照してください。
 
