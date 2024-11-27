@@ -30,17 +30,17 @@ get_submodule_latest_closed_pr_link() {
 
 # サブモジュールのリポジトリURLを取得
 chrome_repo_url=$(get_submodule_repo_url "chrome_extensions")
-backend_repo_url=$(get_submodule_repo_url "errorda2_backend")
+flag_repo_url=$(get_submodule_repo_url "flag_checker")
 
-# chrome_extensionsの最新コミットメッセージを取得
+# 最新コミットメッセージを取得
 chrome_commit_message=$(cd chrome_extensions && git log -1 --pretty=%B)
-# chromeのコミットメッセージ内容
+# コミットメッセージ内容
 chrome_commit_message="submodule_chrome:$chrome_commit_message"
-# chromeの新しいブランチ名
+# 新しいブランチ名
 new_chrome_branch="dev-chrome_extensions-$(date +%Y%m%d%H)"
-# chromeのプルリクエストリンクを取得
+# プルリクエストリンクを取得
 chrome_pr_link=$(get_submodule_latest_closed_pr_link "$chrome_repo_url")
-# chromeのPRの本文
+# PRの本文
 chrome_pr_body=$(echo -e "## やったこと
 \n- サブモジュールの更新内容の反映
 \n## なぜやるのか・背景
@@ -77,16 +77,16 @@ else
     echo "chrome_extensionsに変更はありません"
 fi
 
-# errorda2_backendの最新コミットメッセージを取得
-backend_commit_message=$(cd errorda2_backend && git log -1 --pretty=%B)
-# backendのコミットメッセージ内容
-backend_commit_message="submodule_backend:$backend_commit_message"
-# backendの新しいブランチ名
-new_backend_branch="dev-errorda2_backend-$(date +%Y%m%d%H)"
-# backendのプルリクエストリンクを取得
-backend_pr_link=$(get_submodule_latest_closed_pr_link "$backend_repo_url")
-# backendのPRの本文
-backend_pr_body=$(echo -e "## やったこと
+# 最新コミットメッセージを取得
+flag_commit_message=$(cd flag_checker && git log -1 --pretty=%B)
+# コミットメッセージ内容
+flag_commit_message="submodule_flag:$flag_commit_message"
+# 新しいブランチ名
+new_flag_branch="dev-errorda2_flag_checker-$(date +%Y%m%d%H)"
+# プルリクエストリンクを取得
+flag_pr_link=$(get_submodule_latest_closed_pr_link "$flag_repo_url")
+# PRの本文
+flag_pr_body=$(echo -e "## やったこと
 \n- サブモジュールの更新内容の反映
 \n## なぜやるのか・背景
 \n- 修正や追加機能があったため、それらをプロジェクト内に反映する必要があるため
@@ -94,30 +94,30 @@ backend_pr_body=$(echo -e "## やったこと
 \n- サブモジュール側で実施済み
 \n## Refs
 \n- 対象のサブモジュールのPull requestのリンク
-\n$backend_pr_link")
+\n$flag_pr_link")
 
-# --ここからerrorda2_backendの処理--
-echo "errorda2_backendの変更をステージング(対象以外を含まないために)"
-git add errorda2_backend/
+# --ここからerrorda2_flag_checkerの処理--
+echo "flag_checkerの変更をステージング(対象以外を含まないために)"
+git add flag_checker/
 
-# errorda2_backendに変更があるか確認
-if [ -n "$(git diff --cached --name-only errorda2_backend)" ]; then
+# errorda2_flag_checkerに変更があるか確認
+if [ -n "$(git diff --cached --name-only flag_checker)" ]; then
 
     echo "新しいブランチを作成し切替"
-    git checkout -b "$new_backend_branch"
+    git checkout -b "$new_flag_branch"
 
-    echo "errorda2_backendのコミット・プッシュ"
-    git commit -m "$backend_commit_message"
-    git push origin "$new_backend_branch"
+    echo "flag_checkerのコミット・プッシュ"
+    git commit -m "$flag_commit_message"
+    git push origin "$new_flag_branch"
 
     echo "プルリクエストを作成"
-    gh pr create --title "$new_backend_branch" --body "$backend_pr_body" --base main --head "$new_backend_branch"
+    gh pr create --title "$new_flag_branch" --body "$flag_pr_body" --base main --head "$new_flag_branch"
 
     echo "元のブランチに戻る"
     git checkout "$current_branch"
 
     echo "作成したブランチを削除（ローカルでは不要のため）"
-    git branch -D "$new_backend_branch"
+    git branch -D "$new_flag_branch"
 else
-    echo "errorda2_backendに変更はありません"
+    echo "flag_checkerに変更はありません"
 fi
