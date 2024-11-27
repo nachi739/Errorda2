@@ -3,11 +3,12 @@
 ## サービスの概要
 
 **Errorda2 は Error 解決のプロセスと成長過程を可視化するためのものです。**
+
 **エラー文を検索する際にエラー文の保存とクローム検索を一度に行います。**
 
 - Error 解決に掛かった時間を記録します。
 - Error 解決直後に解決に至るまでに閲覧した URL や解決のヒントなどをメモに残すことができます。
-- 未経験エンジニアをマネジメントする方（未経験エンジニアがどのように検索しているか知り、フィードバックするための OJT 補助ツール）
+- 未経験エンジニアをマネジメントする方（フィードバックするための OJT 補助ツール）
 - 有名記事サイトに投稿はハードルが高いと感じている方。
 
 ## 想定されるユーザー
@@ -18,11 +19,12 @@
 
 ### このアプリを作った背景
 
-**自分が Error を解決するにあたってこんなサービスがあったらと思っていたからです。** 
+**自分が Error を解決するにあたってこんなサービスがあったらと思っていたからです。**
 
 **前回作製した[Errorda!!](https://github.com/nachi739/Errorda-)でできなかったことを実現するため**
 
-プログラミングをする過程で得た気づきや Error の解決方法などを体系的に残すことは難しく、Error を後でまとめようと思うが数日経ってしまい忘れて記録することができないということはよくあると思います。
+プログラミングをする過程で得た気づきや Error の解決方法などを体系的に残すことは難しく、**Error** を後でまとめようと思うが数日経ってしまい忘れて記録することができないということはよくあると思います。
+
 そういった背景から、自分が Error を解決するにあたって Error に直面した際にどのようなワードで検索をしているのかの把握し、自分独自の Error 解決辞書を作成するといったものができないかと思い本アプリを作成しました。
 
 ## ユーザーが持つ課題
@@ -54,63 +56,63 @@
 
 ## Notion の準備
 
-- API-Key(Token)の取得:https://www.notion.so/my-integrations
-  ---
+- ## API-Key(Token)の取得:https://www.notion.so/my-integrations
 
   ![image](https://github.com/user-attachments/assets/f34eda35-ace1-4bf1-89ac-393a239d9bc9)
-  
-  ---
+
+  ***
 
   ![image](https://github.com/user-attachments/assets/d26bdb2d-21c0-4521-8ea5-10cf50527ca4)
 
-  ---
+  ***
 
   ![image](https://github.com/user-attachments/assets/752caa05-1369-44c2-be5b-812bedd95a7a)
 
-  ---
+  ***
 
   ![image](https://github.com/user-attachments/assets/5ee4c38c-fe85-4859-9ba9-31859ef92414)
 
-  ---
+  ***
 
-- Notion-Template の取得: [Template](https://honored-motion-55e.notion.site/129eaa80727680f19b06d02621f24066?v=129eaa807276819899ee000c30bb0f5b&pvs=4)
-  ---
+- ## Notion-Template の取得: [Template](https://honored-motion-55e.notion.site/129eaa80727680f19b06d02621f24066?v=129eaa807276819899ee000c30bb0f5b&pvs=4)
 
   ![image](https://github.com/user-attachments/assets/ce1e13ab-bc85-4aa1-bff2-95c8fa2d2ba6)
 
-  ---
+  ***
 
   ![image](https://github.com/user-attachments/assets/a5fa2250-2951-4327-bfad-2eeee7756d40)
 
-  ---
+  ***
 
   ![image](https://github.com/user-attachments/assets/097c62dc-39e7-440e-b114-882ec7cee757)
 
-  ---
-  
+  ***
+
   ![image](https://github.com/user-attachments/assets/7dd09873-0ea3-4fde-b2af-0c20c38f9d33)
 
-  ---
+  ***
 
   ![image](https://github.com/user-attachments/assets/fbf94598-2e9b-41f3-bcf4-cf00a46ea51a)
 
-  ---
-  
-- DATABASE-IDの取得:  
-`https://www.notion.so/{Notion-DATABASE-ID}?v=000***`
-  ---
+  ***
+
+- DATABASE-ID の取得:  
+  `https://www.notion.so/{Notion-DATABASE-ID}?v=000***`
+  ***
 
 ![image](https://github.com/user-attachments/assets/c79e34a7-c123-41b0-a302-f73d5b93ebc6)
 
-  ---
+---
 
 ## Chrome 拡張機能
 
 ### 入手方法
-[Chromeウェブストアリンクページ](https://chromewebstore.google.com/detail/errorda2-extension/kiokhdhbecikhmpdancgmchlpjjbbkjg)
+
+[Chrome ウェブストアリンクページ](https://chromewebstore.google.com/detail/errorda2-extension/kiokhdhbecikhmpdancgmchlpjjbbkjg)
 
 ### 初回 Notion-Key 情報登録画面
-- NotionのTokenとDatabaseIDを登録します。
+
+- Notion の Token と DatabaseID を登録します。
 
   <img width="315" alt="image" src="https://github.com/user-attachments/assets/1413c089-4b30-4307-b906-3323e7e27ac6">
 
@@ -118,14 +120,14 @@
 
 - 入力テキスト内容で Google 検索を新規タブで行います。
 - NotionDB（新規作成し入力テキスト内容で Title に保存・Start time に検索押下時刻を保存）
-- Key-resetをクリックするとNotion-Key　情報登録画面に遷移しKey情報を更新できます。
+- Key-reset をクリックすると Notion-Key 　情報登録画面に遷移し Key 情報を更新できます。
 
   <img width="315" alt="image" src="https://github.com/user-attachments/assets/1e4c93c3-3bf1-4aeb-a9ff-c9516de2b722">
 
 ### 検索中画面
 
 - NotionDB(End time に解決押下時刻を保存・新規タブで NotionDB の詳細ページへ画面遷移)
-- Error解決時に記載する内容の参考情報を箇条書きで記載
+- Error 解決時に記載する内容の参考情報を箇条書きで記載
 
   <img width="315" alt="image" src="https://github.com/user-attachments/assets/090bb815-0ca0-4467-b6ef-13f481ef26d3">
 
@@ -133,7 +135,7 @@
 
 [Chrome 拡張機能管理 Github](https://github.com/nachi739/errorda2_chrome_extensions/tree/main)を参照してください。
 
-## バックエンド側
+## アウトプット側
 
 - Vercel を利用しデプロイ：https://errorda2.vercel.app
 - NotionDB の Published フラグが有効になっているものを連携
@@ -141,7 +143,7 @@
 
 ### 導入・構築方法
 
-[バックエンド側管理 Github](https://github.com/nachi739/errorda2_next.js)を参照してください。
+[アウトプット側管理 Github](https://github.com/nachi739/errorda2_flag_checker)を参照してください。
 
 ## ライセンス
 

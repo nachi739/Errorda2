@@ -1,6 +1,6 @@
-[submodule "errorda2_backend"]
-	path = errorda2_backend
-	url = git@github.com:nachi739/errorda2_next.js.git
+[submodule "flag_checker"]
+	path = flag_checker
+	url = git@github.com:nachi739/errorda2_flag_checker.git
 [submodule "chrome_extensions"]
 	path = chrome_extensions
 	url = git@github.com:nachi739/errorda2_chrome_extensions.git
