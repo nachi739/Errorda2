@@ -82,7 +82,7 @@ flag_commit_message=$(cd flag_checker && git log -1 --pretty=%B)
 # コミットメッセージ内容
 flag_commit_message="submodule_flag:$flag_commit_message"
 # 新しいブランチ名
-new_flag_branch="dev-errorda2_flag_checker-$(date +%Y%m%d%H)"
+new_flag_branch="dev-flag_checker-$(date +%Y%m%d%H)"
 # プルリクエストリンクを取得
 flag_pr_link=$(get_submodule_latest_closed_pr_link "$flag_repo_url")
 # PRの本文
